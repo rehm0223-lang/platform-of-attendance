@@ -215,12 +215,34 @@ async function iniciarDashboard(sesion) {
 
     const dueno = String(inmueble.propietarioId || "");
     if (!unidadesPorPropietario[dueno]) {
-      unidadesPorPropietario[dueno] = { coeficiente: 0, nombres: [] };
+      unidadesPorPropietario[dueno] = { coeficiente: 0, nombres: [], todas: [] };
     }
     unidadesPorPropietario[dueno].coeficiente += coef;
+
+    // Todas las unidades, incluidas las de coeficiente 0 que van
+    // consolidadas dentro del apartamento y antes no se veían.
+    unidadesPorPropietario[dueno].todas.push({
+      nombre: String(inmueble.nombre),
+      tipo: String(inmueble.tipo || ""),
+      coefRPH: Number(inmueble.coeficienteRPH) || 0,
+      coefVoto: coef,
+    });
+
     if (coef > 0) {
       unidadesPorPropietario[dueno].nombres.push(String(inmueble.nombre));
     }
+  });
+
+  // Apartamentos primero, después depósitos y parqueaderos.
+  const ORDEN_TIPO = { apartamento: 0, deposito: 1, parqueadero: 2 };
+
+  Object.values(unidadesPorPropietario).forEach((u) => {
+    u.todas.sort((a, b) => {
+      const pesoA = ORDEN_TIPO[a.tipo] === undefined ? 9 : ORDEN_TIPO[a.tipo];
+      const pesoB = ORDEN_TIPO[b.tipo] === undefined ? 9 : ORDEN_TIPO[b.tipo];
+      if (pesoA !== pesoB) return pesoA - pesoB;
+      return a.nombre.localeCompare(b.nombre, "es", { numeric: true });
+    });
   });
 
   let propietarios = [];
@@ -314,6 +336,48 @@ async function iniciarDashboard(sesion) {
       linea("Hora del registro: " + fechaLegible(p.registroAsistencia), true);
     }
 
+    if (p.todasUnidades.length) {
+      const titulo = document.createElement("p");
+      titulo.className = "detalle-titulo";
+      titulo.textContent = "Inmuebles (" + p.todasUnidades.length + ")";
+      detalle.append(titulo);
+
+      const cuadro = document.createElement("table");
+      cuadro.className = "cuadro";
+      cuadro.innerHTML =
+        "<thead><tr><th>Inmueble</th><th>Tipo</th>" +
+        "<th class='num'>Coef. RPH</th><th class='num'>Vota</th></tr></thead>";
+
+      const cuerpo = document.createElement("tbody");
+
+      p.todasUnidades.forEach((u) => {
+        const tr = document.createElement("tr");
+        if (u.coefVoto <= 0) tr.className = "apagada";
+
+        const celdas = [
+          { texto: u.nombre },
+          { texto: u.tipo },
+          { texto: porcentaje(u.coefRPH) + "%", num: true },
+          {
+            texto: u.coefVoto > 0 ? porcentaje(u.coefVoto) + "%" : "consolidado",
+            num: true,
+          },
+        ];
+
+        celdas.forEach((celda) => {
+          const td = document.createElement("td");
+          if (celda.num) td.className = "num";
+          td.textContent = celda.texto;
+          tr.append(td);
+        });
+
+        cuerpo.append(tr);
+      });
+
+      cuadro.append(cuerpo);
+      detalle.append(cuadro);
+    }
+
     if (p.listaApoderados.length) {
       linea(
         "Apoderados autorizados: " +
@@ -336,6 +400,118 @@ async function iniciarDashboard(sesion) {
     return detalle;
   }
 
+  function quienIngreso(p) {
+    if (!p.registradoPor) return "Sin registro de ingreso";
+
+    if (p.registradoPor.tipo === "apoderado") {
+      return (
+        "Apoderado: " +
+        (p.registradoPor.nombre || p.registradoPor.identificacion) +
+        " (" + p.registradoPor.identificacion + ")"
+      );
+    }
+
+    if (p.registradoPor.tipo === "propietario") return "El propietario";
+    if (p.registradoPor.tipo === "administracion") {
+      return "Administración (" + p.registradoPor.nombre + ")";
+    }
+
+    return "Sin registro de ingreso";
+  }
+
+  function cuadroImpresion(titulo, grupo, conIngreso) {
+    const bloque = document.createElement("section");
+    bloque.className = "bloque-impresion";
+
+    const coeficiente = grupo.reduce((s, p) => s + p.coeficiente, 0);
+
+    const encabezado = document.createElement("p");
+    encabezado.className = "detalle-titulo";
+    encabezado.textContent =
+      titulo + " — " + grupo.length + " propietarios · " +
+      porcentaje(coeficiente) + "% del coeficiente";
+    bloque.append(encabezado);
+
+    if (!grupo.length) {
+      const vacio = document.createElement("p");
+      vacio.className = "detalle-linea apagado";
+      vacio.textContent = "Ninguno.";
+      bloque.append(vacio);
+      return bloque;
+    }
+
+    const cuadro = document.createElement("table");
+    cuadro.className = "cuadro";
+
+    const columnas = ["Propietario", "Cédula / NIT", "Inmuebles", "Coef."];
+    if (conIngreso) columnas.push("Ingresó", "Hora");
+
+    cuadro.innerHTML =
+      "<thead><tr>" +
+      columnas
+        .map((c, i) =>
+          "<th" + (c === "Coef." ? " class='num'" : "") + ">" + c + "</th>",
+        )
+        .join("") +
+      "</tr></thead>";
+
+    const cuerpo = document.createElement("tbody");
+
+    grupo.forEach((p) => {
+      const tr = document.createElement("tr");
+
+      const valores = [
+        { texto: p.nombre || "(sin nombre)" },
+        { texto: p.id },
+        { texto: p.todasUnidades.map((u) => u.nombre).join(", ") },
+        { texto: porcentaje(p.coeficiente) + "%", num: true },
+      ];
+
+      if (conIngreso) {
+        valores.push({ texto: quienIngreso(p) });
+        valores.push({ texto: fechaLegible(p.registroAsistencia) || "—" });
+      }
+
+      valores.forEach((celda) => {
+        const td = document.createElement("td");
+        if (celda.num) td.className = "num";
+        td.textContent = celda.texto;
+        tr.append(td);
+      });
+
+      cuerpo.append(tr);
+    });
+
+    cuadro.append(cuerpo);
+    bloque.append(cuadro);
+    return bloque;
+  }
+
+  function pintarImpresion() {
+    const sello = document.getElementById("selloImpresion");
+    const contenedor = document.getElementById("tablaImpresion");
+    if (!contenedor) return;
+
+    if (sello) {
+      sello.textContent =
+        "Generado el " +
+        new Date().toLocaleString("es-CO", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+    }
+
+    const presentes = propietarios.filter((p) => p.asistio);
+    const ausentes = propietarios.filter((p) => !p.asistio);
+
+    contenedor.innerHTML = "";
+    contenedor.append(cuadroImpresion("Presentes", presentes, true));
+    contenedor.append(cuadroImpresion("Ausentes", ausentes, false));
+  }
+
   function pintarLista() {
     const texto = filtro.trim().toLowerCase();
 
@@ -344,7 +520,11 @@ async function iniciarDashboard(sesion) {
       return (
         p.nombre.toLowerCase().includes(texto) ||
         p.id.toLowerCase().includes(texto) ||
-        p.nombres.join(" ").toLowerCase().includes(texto) ||
+        p.todasUnidades
+          .map((u) => u.nombre)
+          .join(" ")
+          .toLowerCase()
+          .includes(texto) ||
         p.apoderados.toLowerCase().includes(texto) ||
         p.cedulasApoderados.join(" ").includes(texto)
       );
@@ -378,7 +558,14 @@ async function iniciarDashboard(sesion) {
       const meta = document.createElement("p");
       meta.className = "fila-meta";
       const partes = [p.id];
-      if (p.nombres.length) partes.push(p.nombres.join(", "));
+      if (p.todasUnidades.length) {
+        partes.push(
+          p.todasUnidades.length +
+            (p.todasUnidades.length === 1 ? " inmueble" : " inmuebles") +
+            ": " +
+            p.todasUnidades.map((u) => u.nombre).join(", "),
+        );
+      }
       if (p.apoderados) partes.push("Apoderado: " + p.apoderados);
       meta.textContent = partes.join("  ·  ");
 
@@ -440,6 +627,7 @@ async function iniciarDashboard(sesion) {
         const unidades = unidadesPorPropietario[hijo.key] || {
           coeficiente: 0,
           nombres: [],
+          todas: [],
         };
 
         propietarios.push({
@@ -454,6 +642,7 @@ async function iniciarDashboard(sesion) {
           registradoPor: datos.registradoPor || null,
           coeficiente: unidades.coeficiente,
           nombres: unidades.nombres,
+          todasUnidades: unidades.todas,
         });
       });
 
@@ -461,6 +650,7 @@ async function iniciarDashboard(sesion) {
 
       pintarQuorum();
       pintarLista();
+      pintarImpresion();
     },
     (error) => {
       console.error(error);
@@ -473,6 +663,9 @@ async function iniciarDashboard(sesion) {
     filtro = buscador.value;
     pintarLista();
   });
+
+  const btnPdf = document.getElementById("btnPdf");
+  if (btnPdf) btnPdf.addEventListener("click", () => window.print());
 }
 
 /* ---------- Vistas internas ---------- */

@@ -976,3 +976,246 @@ h1 {
   margin-top: 12px;
   padding-top: 12px;
 }
+
+/* ---------- Reporte: encabezado y filas apagadas ---------- */
+
+.titulo-con-accion {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cuadro tr.apagada td {
+  color: var(--tinta-suave);
+}
+
+.solo-impresion {
+  display: none;
+}
+
+/* ---------- Impresión / PDF ---------- */
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 11px;
+  }
+
+  /* Los colores de las donas y las filas resaltadas deben salir en el PDF. */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .barra,
+  .lateral,
+  .herramientas,
+  .pestanas,
+  .btn,
+  .btn-mini,
+  .btn-texto,
+  .marcar {
+    display: none !important;
+  }
+
+  .solo-impresion {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--tinta-suave);
+    margin: 4px 0 0;
+  }
+
+  .marco,
+  .vista,
+  .vista-ancha {
+    display: block;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* En el PDF se imprime todo: las dos pestañas y el detalle completo. */
+  .panel-pestana[hidden],
+  .detalle[hidden] {
+    display: block !important;
+  }
+
+  .cuadricula {
+    display: block;
+    margin-top: 12px;
+  }
+
+  .resultado,
+  .panel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+  }
+
+  .resultado .pregunta-titulo {
+    font-size: 14px;
+    margin: 6px 0 10px;
+  }
+
+  /* Sin pestañas visibles hay que rotular cada panel. */
+  .panel-pestana::before {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    margin: 10px 0 6px;
+  }
+
+  .panel-pestana:nth-of-type(1)::before {
+    content: "Quórum";
+  }
+
+  .panel-pestana:nth-of-type(2)::before {
+    content: "Calificación";
+  }
+
+  .anillo,
+  .dona {
+    width: 92px;
+    flex-basis: 92px;
+  }
+
+  .dona {
+    height: 92px;
+  }
+
+  .anillo-centro strong {
+    font-size: 15px;
+  }
+
+  .detalle {
+    break-inside: auto;
+  }
+
+  .cuadro {
+    font-size: 10px;
+  }
+
+  .acciones {
+    display: none !important;
+  }
+}
+
+/* ---------- Cuadro: separación entre columnas ----------
+   La regla .num llevaba padding-right: 0 pensando en que siempre fuera la
+   última columna. Ahora que hay columnas después, cada celda separa por la
+   derecha y solo la última queda al ras. */
+
+.cuadro th,
+.cuadro td,
+.cuadro .num {
+  padding-right: 20px;
+}
+
+.cuadro th:last-child,
+.cuadro td:last-child {
+  padding-right: 0;
+}
+
+.cuadro td {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+/* La primera columna es la que carga los nombres largos. */
+.cuadro td:first-child,
+.cuadro th:first-child {
+  padding-right: 24px;
+}
+
+@media print {
+  .cuadro th,
+  .cuadro td,
+  .cuadro .num {
+    padding-right: 12px;
+  }
+
+  .cuadro th:last-child,
+  .cuadro td:last-child {
+    padding-right: 0;
+  }
+
+  .cuadro td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+
+/* ---------- PDF de la lista de asistencia ----------
+   Va al final de styles.css, después del bloque @media print que ya tienes. */
+
+@media print {
+  /* En papel manda la tabla, no las tarjetas de la pantalla. */
+  .lista,
+  .herramientas,
+  .titulo-con-accion .btn-mini {
+    display: none !important;
+  }
+
+  #tablaImpresion {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .bloque-impresion {
+    margin-bottom: 18px;
+    break-inside: auto;
+  }
+
+  .bloque-impresion .detalle-titulo {
+    font-size: 10px;
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .bloque-impresion .cuadro {
+    width: 100%;
+    font-size: 9.5px;
+  }
+
+  .bloque-impresion .cuadro th {
+    padding: 0 10px 5px 0;
+  }
+
+  .bloque-impresion .cuadro td {
+    padding: 5px 10px 5px 0;
+    vertical-align: top;
+  }
+
+  .bloque-impresion .cuadro th:last-child,
+  .bloque-impresion .cuadro td:last-child {
+    padding-right: 0;
+  }
+
+  .bloque-impresion .cuadro tr {
+    break-inside: avoid;
+  }
+
+  /* El panel del quórum encabeza la hoja, sin la barra de progreso. */
+  .progreso {
+    display: none;
+  }
+
+  .cifra {
+    font-size: 30px;
+    margin: 6px 0 8px;
+  }
+}

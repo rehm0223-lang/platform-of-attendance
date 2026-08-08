@@ -32,8 +32,15 @@
       </nav>
 
       <main class="vista vista-ancha">
-        <h1>Reporte de votación</h1>
-        <p class="sub">Resultados por punto, ponderados por coeficiente.</p>
+        <div class="titulo-con-accion">
+          <div>
+            <h1>Reporte de votación</h1>
+            <p class="sub">Resultados por punto, ponderados por coeficiente.</p>
+          </div>
+          <button type="button" class="btn-mini" id="btnPdf">Descargar PDF</button>
+        </div>
+
+        <p class="solo-impresion" id="selloImpresion"></p>
 
         <section class="panel">
           <div class="metricas" id="resumen"></div>

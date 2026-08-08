@@ -29,16 +29,24 @@
           >Asistencia</a
         >
         <a class="lateral-item" href="apoderados.html">Apoderados</a>
-        
         <a class="lateral-item" href="preguntas.html">Preguntas</a>
         <a class="lateral-item" href="reporte.html">Reporte</a>
       </nav>
 
       <main class="vista">
-        <h1>Verificación del quórum</h1>
-        <p class="sub">
-          Marca quién está presente. El quórum se actualiza solo.
-        </p>
+        <div class="titulo-con-accion">
+          <div>
+            <h1>Verificación del quórum</h1>
+            <p class="sub">
+              Marca quién está presente. El quórum se actualiza solo.
+            </p>
+          </div>
+          <button type="button" class="btn-mini" id="btnPdf">
+            Descargar PDF
+          </button>
+        </div>
+
+        <p class="solo-impresion" id="selloImpresion"></p>
 
         <section class="panel" id="panelQuorum">
           <p class="eyebrow">Coeficiente presente</p>
@@ -66,6 +74,9 @@
             </div>
           </div>
         </section>
+
+        <!-- Solo aparece en el PDF: presentes y ausentes en tablas. -->
+        <div class="solo-impresion" id="tablaImpresion"></div>
 
         <div class="herramientas">
           <input

@@ -94,6 +94,7 @@ function tabla(cabeceras, filas) {
   filas.forEach((fila) => {
     const tr = document.createElement("tr");
     if (fila.destacada) tr.className = "mayoria";
+    if (fila.apagada) tr.className = "apagada";
 
     fila.celdas.forEach((celda) => {
       const td = document.createElement("td");
@@ -336,51 +337,56 @@ async function iniciarReporte() {
     return panel;
   }
 
-  /* ----- Detalle nominal ----- */
+  /* ----- Detalle nominal: todos los propietarios en un solo cuadro ----- */
 
   function bloqueDetalle(dieron, ids) {
     const detalle = document.createElement("div");
     detalle.className = "detalle";
     detalle.hidden = true;
 
-    if (ids.length) {
-      detalle.append(
-        tabla(
-          [
-            { texto: "Propietario" },
-            { texto: "Coef.", num: true },
-            { texto: "Respuesta" },
-          ],
-          ids.map((id) => ({
+    const todos = Object.keys(propietarios);
+
+    // Primero los que respondieron, después los que no; alfabético dentro de cada grupo.
+    todos.sort((a, b) => {
+      const respondioA = dieron[a] ? 0 : 1;
+      const respondioB = dieron[b] ? 0 : 1;
+      if (respondioA !== respondioB) return respondioA - respondioB;
+      return nombreDe(a).localeCompare(nombreDe(b), "es");
+    });
+
+    const titulo = document.createElement("p");
+    titulo.className = "detalle-titulo";
+    titulo.textContent =
+      "Respondieron " + ids.length + " · Sin responder " + (todos.length - ids.length);
+    detalle.append(titulo);
+
+    detalle.append(
+      tabla(
+        [
+          { texto: "Propietario" },
+          { texto: "Coef.", num: true },
+          { texto: "Respuesta" },
+        ],
+        todos.map((id) => {
+          const respuesta = dieron[id];
+
+          return {
+            apagada: !respuesta,
             celdas: [
               { texto: nombreDe(id) },
               { texto: porcentaje(coeficienteDe(id)) + "%", num: true },
               {
-                texto: textoValor(dieron[id].valor),
+                texto: respuesta ? textoValor(respuesta.valor) : "Sin responder",
                 nota:
-                  dieron[id].votadaPor && dieron[id].votadaPor !== id
-                    ? "por apoderado " + dieron[id].votadaPor
+                  respuesta && respuesta.votadaPor && respuesta.votadaPor !== id
+                    ? "por apoderado " + respuesta.votadaPor
                     : null,
               },
             ],
-          })),
-        ),
-      );
-    }
-
-    const faltantes = Object.keys(propietarios).filter((id) => !dieron[id]);
-
-    if (faltantes.length) {
-      const titulo = document.createElement("p");
-      titulo.className = "detalle-titulo";
-      titulo.textContent = "Sin responder (" + faltantes.length + ")";
-
-      const linea = document.createElement("p");
-      linea.className = "detalle-linea apagado";
-      linea.textContent = faltantes.map(nombreDe).join("  ·  ");
-
-      detalle.append(titulo, linea);
-    }
+          };
+        }),
+      ),
+    );
 
     return detalle;
   }
@@ -523,8 +529,24 @@ async function iniciarReporte() {
     });
   }
 
+  function prepararImpresion() {
+    const sello = document.getElementById("selloImpresion");
+    if (!sello) return;
+
+    sello.textContent =
+      "Generado el " +
+      new Date().toLocaleString("es-CO", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+  }
+
   function pintar() {
     pintarResumen();
+    prepararImpresion();
     contenedor.innerHTML = "";
 
     if (!preguntas.length) {
@@ -537,6 +559,9 @@ async function iniciarReporte() {
       contenedor.append(tarjeta(pregunta, indice));
     });
   }
+
+  const btnPdf = document.getElementById("btnPdf");
+  if (btnPdf) btnPdf.addEventListener("click", () => window.print());
 
   onValue(
     ref(db, "preguntas"),
