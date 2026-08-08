@@ -319,13 +319,11 @@ async function iniciarDashboard(sesion) {
     } else if (p.registradoPor && p.registradoPor.tipo === "apoderado") {
       linea(
         "Ingresó " +
-          (p.registradoPor.nombre || p.registradoPor.identificacion) +
+          (p.registradoPor.nombre || "el apoderado registrado") +
           ", apoderado del propietario.",
       );
-      linea("Cédula del apoderado: " + p.registradoPor.identificacion, true);
     } else if (p.registradoPor && p.registradoPor.tipo === "propietario") {
       linea("Ingresó el propietario en persona.");
-      linea("Cédula: " + p.registradoPor.identificacion, true);
     } else if (p.registradoPor && p.registradoPor.tipo === "administracion") {
       linea("Marcado a mano por la administración (" + p.registradoPor.nombre + ").");
     } else {
@@ -382,7 +380,7 @@ async function iniciarDashboard(sesion) {
       linea(
         "Apoderados autorizados: " +
           p.listaApoderados
-            .map((a) => (a.nombre || "sin nombre") + " (" + a.identificacion + ")")
+            .map((a) => a.nombre || "sin nombre")
             .join("  ·  "),
         true,
       );
@@ -404,11 +402,7 @@ async function iniciarDashboard(sesion) {
     if (!p.registradoPor) return "Sin registro de ingreso";
 
     if (p.registradoPor.tipo === "apoderado") {
-      return (
-        "Apoderado: " +
-        (p.registradoPor.nombre || p.registradoPor.identificacion) +
-        " (" + p.registradoPor.identificacion + ")"
-      );
+      return "Apoderado: " + (p.registradoPor.nombre || "sin nombre");
     }
 
     if (p.registradoPor.tipo === "propietario") return "El propietario";
@@ -443,7 +437,7 @@ async function iniciarDashboard(sesion) {
     const cuadro = document.createElement("table");
     cuadro.className = "cuadro";
 
-    const columnas = ["Propietario", "Cédula / NIT", "Inmuebles", "Coef."];
+    const columnas = ["Propietario", "Inmuebles", "Coef."];
     if (conIngreso) columnas.push("Ingresó", "Hora");
 
     cuadro.innerHTML =
@@ -462,7 +456,6 @@ async function iniciarDashboard(sesion) {
 
       const valores = [
         { texto: p.nombre || "(sin nombre)" },
-        { texto: p.id },
         { texto: p.todasUnidades.map((u) => u.nombre).join(", ") },
         { texto: porcentaje(p.coeficiente) + "%", num: true },
       ];
@@ -557,7 +550,7 @@ async function iniciarDashboard(sesion) {
 
       const meta = document.createElement("p");
       meta.className = "fila-meta";
-      const partes = [p.id];
+      const partes = [];
       if (p.todasUnidades.length) {
         partes.push(
           p.todasUnidades.length +
