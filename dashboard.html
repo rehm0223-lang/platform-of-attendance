@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistencia — Asamblea RPH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-pagina="dashboard">
+    <header class="barra">
+      <p class="eyebrow">Asamblea &middot; RPH</p>
+      <div class="barra-fin">
+        <span class="usuario" id="usuarioActivo"></span>
+        <button type="button" class="btn-texto" id="btnSalir">
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+
+    <div class="marco">
+      <nav class="lateral" aria-label="Secciones">
+        <a class="lateral-item" href="dashboard.html" aria-current="page"
+          >Asistencia</a
+        >
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
+        
+        <a class="lateral-item" href="preguntas.html">Preguntas</a>
+        <a class="lateral-item" href="reporte.html">Reporte</a>
+      </nav>
+
+      <main class="vista">
+        <h1>Verificación del quórum</h1>
+        <p class="sub">
+          Marca quién está presente. El quórum se actualiza solo.
+        </p>
+
+        <section class="panel" id="panelQuorum">
+          <p class="eyebrow">Coeficiente presente</p>
+          <p class="cifra" id="cifraQuorum">0.00<span>%</span></p>
+
+          <div class="progreso">
+            <div class="progreso-relleno" id="progresoRelleno"></div>
+            <div class="progreso-meta"></div>
+          </div>
+
+          <p class="estado" id="estadoQuorum">Sin registros todavía.</p>
+
+          <div class="metricas">
+            <div class="metrica">
+              <span class="metrica-valor" id="metricaPresentes">0</span>
+              <span class="metrica-etiqueta">Propietarios presentes</span>
+            </div>
+            <div class="metrica">
+              <span class="metrica-valor" id="metricaUnidades">0</span>
+              <span class="metrica-etiqueta">Unidades representadas</span>
+            </div>
+            <div class="metrica">
+              <span class="metrica-valor" id="metricaFalta">—</span>
+              <span class="metrica-etiqueta">Falta para iniciar</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="herramientas">
+          <input
+            type="search"
+            id="buscador"
+            placeholder="Buscar por nombre, cédula o inmueble"
+            autocomplete="off"
+          />
+          <span class="conteo" id="conteoLista"></span>
+        </div>
+
+        <div class="lista" id="lista"></div>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

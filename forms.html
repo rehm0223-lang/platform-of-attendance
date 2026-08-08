@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votación — Asamblea RPH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-pagina="forms">
+
+  <header class="barra">
+    <p class="eyebrow">Asamblea &middot; RPH</p>
+    <div class="barra-fin">
+      <span class="usuario" id="usuarioActivo"></span>
+      <button type="button" class="btn-texto" id="btnSalir">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="vista vista-angosta">
+    <h1>Orden del día</h1>
+    <p class="sub">Responde cada punto mientras esté abierto. Una vez enviada, la respuesta no se puede cambiar.</p>
+
+    <section class="identidad" id="identidad" hidden>
+      <p class="identidad-nombre" id="identidadNombre"></p>
+      <p class="identidad-meta" id="identidadMeta"></p>
+      <p class="guardado" id="avisoAsistencia" hidden></p>
+    </section>
+
+    <div id="preguntasPropietario">
+      <p class="vacio">Cargando...</p>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="forms.js"></script>
+</body>
+</html>

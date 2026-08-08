@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preguntas — Asamblea RPH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-pagina="preguntas">
+    <header class="barra">
+      <p class="eyebrow">Asamblea &middot; RPH</p>
+      <div class="barra-fin">
+        <span class="usuario" id="usuarioActivo"></span>
+        <button type="button" class="btn-texto" id="btnSalir">
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+
+    <div class="marco">
+      <nav class="lateral" aria-label="Secciones">
+        <a class="lateral-item" href="dashboard.html">Asistencia</a>
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
+        <a class="lateral-item" href="preguntas.html" aria-current="page"
+          >Preguntas</a
+        >
+        <a class="lateral-item" href="reporte.html">Reporte</a>
+      </nav>
+
+      <main class="vista">
+        <h1>Preguntas</h1>
+        <p class="sub">Configura lo que verán los propietarios al votar.</p>
+
+        <section class="panel">
+          <p class="eyebrow" id="tituloFormulario">Nueva pregunta</p>
+
+          <div class="campo">
+            <label for="titulo">Pregunta</label>
+            <input
+              type="text"
+              id="titulo"
+              placeholder="¿Aprueba la reforma del reglamento?"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+              <option value="cerrada">Cerrada — elige entre opciones</option>
+              <option value="abierta">Abierta — escribe su respuesta</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="duracion">Tiempo para responder (minutos)</label>
+            <input type="number" id="duracion" min="1" max="120" step="1" value="5" />
+          </div>
+
+          <div id="bloqueOpciones">
+            <div class="campo">
+              <label>Opciones</label>
+              <div class="opciones" id="opciones"></div>
+              <button type="button" class="btn-texto" id="btnAgregarOpcion">
+                Agregar opción
+              </button>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" id="multiple" />
+              Permitir elegir varias opciones
+            </label>
+          </div>
+
+          <p class="error" id="errorPregunta" hidden></p>
+
+          <div class="acciones">
+            <button type="button" class="btn btn-auto" id="btnGuardar">
+              Guardar pregunta
+            </button>
+            <button type="button" class="btn-texto" id="btnCancelar" hidden>
+              Cancelar edición
+            </button>
+          </div>
+        </section>
+
+        <div class="herramientas">
+          <span class="conteo" id="conteoPreguntas"></span>
+        </div>
+
+        <div class="lista" id="listaPreguntas"></div>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="preguntas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte — Asamblea RPH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-pagina="reporte">
+    <header class="barra">
+      <p class="eyebrow">Asamblea &middot; RPH</p>
+      <div class="barra-fin">
+        <span class="usuario" id="usuarioActivo"></span>
+        <button type="button" class="btn-texto" id="btnSalir">
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+
+    <div class="marco">
+      <nav class="lateral" aria-label="Secciones">
+        <a class="lateral-item" href="dashboard.html">Asistencia</a>
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
+        <a class="lateral-item" href="preguntas.html">Preguntas</a>
+        <a class="lateral-item" href="reporte.html" aria-current="page">Reporte</a>
+      </nav>
+
+      <main class="vista vista-ancha">
+        <h1>Reporte de votación</h1>
+        <p class="sub">Resultados por punto, ponderados por coeficiente.</p>
+
+        <section class="panel">
+          <div class="metricas" id="resumen"></div>
+        </section>
+
+        <div class="cuadricula" id="reporte">
+          <p class="vacio">Cargando resultados...</p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="reporte.js"></script>
+  </body>
+</html>
