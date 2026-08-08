@@ -1,4 +1,20 @@
-config/.env
-coloquio-forms-default-rtdb-export.json
-data-07082026/
-data.json
+# Configuración de Firebase con los valores reales
+config.js
+
+# Datos de propietarios: nombres y cédulas de personas reales.
+# Esto es lo que de verdad no puede quedar en un repositorio público.
+propietarios.json
+usuarios.json
+inmuebles.json
+base-completa.json
+*.xlsx
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Firebase CLI
+.firebase/
+firebase-debug.log

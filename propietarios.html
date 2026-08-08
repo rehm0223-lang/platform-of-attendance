@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propietarios — Asamblea RPH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-pagina="propietarios">
+    <header class="barra">
+      <p class="eyebrow">Asamblea &middot; RPH</p>
+      <div class="barra-fin">
+        <span class="usuario" id="usuarioActivo"></span>
+        <button type="button" class="btn-texto" id="btnSalir">
+          Cerrar sesión
+        </button>
+      </div>
+    </header>
+
+    <div class="marco">
+      <nav class="lateral" aria-label="Secciones">
+        <a class="lateral-item" href="dashboard.html">Asistencia</a>
+        <a class="lateral-item" href="propietarios.html" aria-current="page"
+          >Propietarios</a
+        >
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
+        <a class="lateral-item" href="preguntas.html">Preguntas</a>
+        <a class="lateral-item" href="reporte.html">Reporte</a>
+      </nav>
+
+      <main class="vista">
+        <h1>Propietarios e inmuebles</h1>
+        <p class="sub">
+          Al crear un propietario se le genera su acceso automáticamente. Entra
+          con su identificación como usuario y como contraseña.
+        </p>
+
+        <section class="panel">
+          <div class="metricas" id="totales"></div>
+          <p class="estado" id="avisoTotales"></p>
+        </section>
+
+        <section class="panel">
+          <p class="eyebrow" id="tituloPropietario">Nuevo propietario</p>
+
+          <div class="campo">
+            <label for="identificacion">Identificación (cédula o NIT)</label>
+            <input
+              type="text"
+              id="identificacion"
+              placeholder="1128048694"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="nombrePropietario">Nombre</label>
+            <input
+              type="text"
+              id="nombrePropietario"
+              placeholder="Nombre completo o razón social"
+              autocomplete="off"
+            />
+          </div>
+
+          <p class="error" id="errorPropietario" hidden></p>
+          <p class="guardado" id="notaPropietario" hidden></p>
+
+          <div class="acciones">
+            <button type="button" class="btn btn-auto" id="btnGuardarPropietario">
+              Guardar propietario
+            </button>
+            <button type="button" class="btn-texto" id="btnCancelarPropietario" hidden>
+              Cancelar edición
+            </button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="eyebrow" id="tituloInmueble">Nuevo inmueble</p>
+
+          <div class="campo">
+            <label for="duenoInmueble">Propietario</label>
+            <select id="duenoInmueble"></select>
+          </div>
+
+          <div class="campo">
+            <label for="nombreInmueble">Nombre del inmueble</label>
+            <input
+              type="text"
+              id="nombreInmueble"
+              placeholder="305 · Deposito 5 · PARQUEADERO 16"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="tipoInmueble">Tipo</label>
+            <select id="tipoInmueble">
+              <option value="apartamento">Apartamento</option>
+              <option value="deposito">Depósito</option>
+              <option value="parqueadero">Parqueadero</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="coefRPH">Coeficiente del RPH (%)</label>
+            <input type="number" id="coefRPH" step="0.0001" min="0" max="100" placeholder="2.64" />
+          </div>
+
+          <div class="campo">
+            <label for="coefVoto">Coeficiente con que vota (%)</label>
+            <input type="number" id="coefVoto" step="0.0001" min="0" max="100" placeholder="3.20" />
+            <p class="ayuda">
+              Deja 0 si la unidad va consolidada dentro de un apartamento, como
+              los depósitos y parqueaderos.
+            </p>
+          </div>
+
+          <p class="error" id="errorInmueble" hidden></p>
+
+          <div class="acciones">
+            <button type="button" class="btn btn-auto" id="btnGuardarInmueble">
+              Guardar inmueble
+            </button>
+            <button type="button" class="btn-texto" id="btnCancelarInmueble" hidden>
+              Cancelar edición
+            </button>
+          </div>
+        </section>
+
+        <div class="herramientas">
+          <input
+            type="search"
+            id="buscador"
+            placeholder="Buscar por nombre, identificación o inmueble"
+            autocomplete="off"
+          />
+          <span class="conteo" id="conteoLista"></span>
+        </div>
+
+        <div class="lista" id="lista"></div>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="propietarios.js"></script>
+  </body>
+</html>

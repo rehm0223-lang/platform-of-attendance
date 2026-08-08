@@ -1,0 +1,771 @@
+{
+  "usuarios": {
+    "will": {
+      "user": "will",
+      "password": "1234",
+      "type": "0"
+    },
+    "jesus": {
+      "user": "jesus",
+      "password": "5678",
+      "type": "0"
+    },
+    "quique": {
+      "user": "quique",
+      "password": "91011",
+      "type": "0"
+    },
+
+    "9063328": {
+      "user": "9063328",
+      "password": "9063328",
+      "type": "1"
+    },
+    "91204800": {
+      "user": "91204800",
+      "password": "91204800",
+      "type": "1"
+    },
+    "45547332": {
+      "user": "45547332",
+      "password": "45547332",
+      "type": "1"
+    },
+    "900856338-2": {
+      "user": "900856338-2",
+      "password": "900856338-2",
+      "type": "1"
+    },
+    "9066266": {
+      "user": "9066266",
+      "password": "9066266",
+      "type": "1"
+    },
+    "1047381349": {
+      "user": "1047381349",
+      "password": "1047381349",
+      "type": "1"
+    },
+    "1044912391": {
+      "user": "1044912391",
+      "password": "1044912391",
+      "type": "1"
+    },
+    "1003275308": {
+      "user": "1003275308",
+      "password": "1003275308",
+      "type": "1"
+    },
+    "32936726": {
+      "user": "32936726",
+      "password": "32936726",
+      "type": "1"
+    },
+    "9093216": {
+      "user": "9093216",
+      "password": "9093216",
+      "type": "1"
+    },
+    "73109135": {
+      "user": "73109135",
+      "password": "73109135",
+      "type": "1"
+    },
+    "1047397187": {
+      "user": "1047397187",
+      "password": "1047397187",
+      "type": "1"
+    },
+    "52348807": {
+      "user": "52348807",
+      "password": "52348807",
+      "type": "1"
+    },
+    "7921248": {
+      "user": "7921248",
+      "password": "7921248",
+      "type": "1"
+    },
+    "1143368193": {
+      "user": "1143368193",
+      "password": "1143368193",
+      "type": "1"
+    },
+    "1047397033": {
+      "user": "1047397033",
+      "password": "1047397033",
+      "type": "1"
+    },
+    "50932645": {
+      "user": "50932645",
+      "password": "50932645",
+      "type": "1"
+    },
+    "900887458-0": {
+      "user": "900887458-0",
+      "password": "900887458-0",
+      "type": "1"
+    },
+    "1143329006": {
+      "user": "1143329006",
+      "password": "1143329006",
+      "type": "1"
+    },
+    "73096086": {
+      "user": "73096086",
+      "password": "73096086",
+      "type": "1"
+    },
+    "XDE033297": {
+      "user": "XDE033297",
+      "password": "XDE033297",
+      "type": "1"
+    },
+    "1128048694": {
+      "user": "1128048694",
+      "password": "1128048694",
+      "type": "1"
+    },
+    "1051661343": {
+      "user": "1051661343",
+      "password": "1051661343",
+      "type": "1"
+    },
+    "33102801": {
+      "user": "33102801",
+      "password": "33102801",
+      "type": "1"
+    }
+  },
+  "propietarios": {
+    "9063328": {
+      "identificacion": "9063328",
+      "nombre": "PEDRO GARCIA ECHENIQUIE",
+      "apoderado": "",
+      "asistio": false
+    },
+    "91204800": {
+      "identificacion": "91204800",
+      "nombre": "REINALDO CARREÑO LUENGAS",
+      "apoderado": "",
+      "asistio": false
+    },
+    "45547332": {
+      "identificacion": "45547332",
+      "nombre": "DIANA PAOLA BARRIOS GARALAGA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "900856338-2": {
+      "identificacion": "900856338-2",
+      "nombre": "PROMOTORA MIRADOR DE LA VILLA",
+      "apoderado": "CAROLINA ALVIS YEPES",
+      "asistio": false
+    },
+    "9066266": {
+      "identificacion": "9066266",
+      "nombre": "PEDRO MANUEL CALDERON MEJIA",
+      "apoderado": "ASTRID CALDERON",
+      "asistio": false
+    },
+    "1047381349": {
+      "identificacion": "1047381349",
+      "nombre": "FELIX RICARDO LEAL MERCADO",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1044912391": {
+      "identificacion": "1044912391",
+      "nombre": "SERGIO FIGUEROA ESPINOSA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1003275308": {
+      "identificacion": "1003275308",
+      "nombre": "JESUS JAVIER SUAREZ MOSCOTE",
+      "apoderado": "",
+      "asistio": false
+    },
+    "32936726": {
+      "identificacion": "32936726",
+      "nombre": "DIANA CAROLINA ALVIS YEPES",
+      "apoderado": "CAROLINA ALVIS YEPES",
+      "asistio": false
+    },
+    "9093216": {
+      "identificacion": "9093216",
+      "nombre": "VENTURA  CASTRO CARMONA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "73109135": {
+      "identificacion": "73109135",
+      "nombre": "LUIS FERNANDO DIAZ PICO",
+      "apoderado": "YIRINA DIAZ",
+      "asistio": false
+    },
+    "1047397187": {
+      "identificacion": "1047397187",
+      "nombre": "FRANCEDY VASCO RESTREPO",
+      "apoderado": "",
+      "asistio": false
+    },
+    "52348807": {
+      "identificacion": "52348807",
+      "nombre": "PATRICIA EMILCE ROMERO MURILLO  Y RICARDO SARMIENTO",
+      "apoderado": "",
+      "asistio": false
+    },
+    "7921248": {
+      "identificacion": "7921248",
+      "nombre": "WALTER REYES Y LILIANA VALENCIA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1143368193": {
+      "identificacion": "1143368193",
+      "nombre": "JESUS DE AVILA BOHORQUEZ",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1047397033": {
+      "identificacion": "1047397033",
+      "nombre": "LUIS GUILLERMO CABARCAS",
+      "apoderado": "",
+      "asistio": false
+    },
+    "50932645": {
+      "identificacion": "50932645",
+      "nombre": "MONICA BUENDIA REYES",
+      "apoderado": "",
+      "asistio": false
+    },
+    "900887458-0": {
+      "identificacion": "900887458-0",
+      "nombre": "KADALE SAS",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1143329006": {
+      "identificacion": "1143329006",
+      "nombre": "VANESSA ALVAREZ Y MARCO GARCIA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "73096086": {
+      "identificacion": "73096086",
+      "nombre": "LEON RAMIRO PATERNINA P",
+      "apoderado": "",
+      "asistio": false
+    },
+    "XDE033297": {
+      "identificacion": "XDE033297",
+      "nombre": "RICCARDO MARRA",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1128048694": {
+      "identificacion": "1128048694",
+      "nombre": "BERCELIO MARRUGO PARRA Y LAURA PACHECO",
+      "apoderado": "",
+      "asistio": false
+    },
+    "1051661343": {
+      "identificacion": "1051661343",
+      "nombre": "ANA  MARIA ACUÑA BELEÑO",
+      "apoderado": "",
+      "asistio": false
+    },
+    "33102801": {
+      "identificacion": "33102801",
+      "nombre": "AURA MARIA GONZALEZ HENRIQUEZ",
+      "apoderado": "",
+      "asistio": false
+    }
+  },
+  "inmuebles": {
+    "201": {
+      "nombre": "201",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0324,
+      "coeficienteVoto": 0.0373,
+      "propietarioId": "9063328"
+    },
+    "PARQUEADERO-1": {
+      "nombre": "PARQUEADERO 1",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "9063328"
+    },
+    "202": {
+      "nombre": "202",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.033,
+      "coeficienteVoto": 0.0379,
+      "propietarioId": "91204800"
+    },
+    "PARQUEADERO-2": {
+      "nombre": "PARQUEADERO 2",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "91204800"
+    },
+    "203": {
+      "nombre": "203",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.031,
+      "coeficienteVoto": 0.0359,
+      "propietarioId": "45547332"
+    },
+    "PARQUEADERO-18": {
+      "nombre": "PARQUEADERO 18",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "45547332"
+    },
+    "204": {
+      "nombre": "204",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0311,
+      "coeficienteVoto": 0.036,
+      "propietarioId": "900856338-2"
+    },
+    "PARQUEADERO-4": {
+      "nombre": "PARQUEADERO 4",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "900856338-2"
+    },
+    "205": {
+      "nombre": "205",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0264,
+      "coeficienteVoto": 0.0313,
+      "propietarioId": "9066266"
+    },
+    "PARQUEADERO-5": {
+      "nombre": "PARQUEADERO 5",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "9066266"
+    },
+    "206": {
+      "nombre": "206",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0201,
+      "coeficienteVoto": 0.025,
+      "propietarioId": "1047381349"
+    },
+    "PARQUEADERO-6": {
+      "nombre": "PARQUEADERO 6",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1047381349"
+    },
+    "301": {
+      "nombre": "301",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0324,
+      "coeficienteVoto": 0.0373,
+      "propietarioId": "1044912391"
+    },
+    "PARQUEADERO-11": {
+      "nombre": "PARQUEADERO 11",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1044912391"
+    },
+    "302": {
+      "nombre": "302",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.033,
+      "coeficienteVoto": 0.0379,
+      "propietarioId": "9066266"
+    },
+    "PARQUEADERO-8": {
+      "nombre": "PARQUEADERO 8",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "9066266"
+    },
+    "303": {
+      "nombre": "303",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.031,
+      "coeficienteVoto": 0.0359,
+      "propietarioId": "1003275308"
+    },
+    "PARQUEADERO-28": {
+      "nombre": "PARQUEADERO 28",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1003275308"
+    },
+    "304": {
+      "nombre": "304",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0311,
+      "coeficienteVoto": 0.036,
+      "propietarioId": "32936726"
+    },
+    "PARQUEADERO-21": {
+      "nombre": "PARQUEADERO 21",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "32936726"
+    },
+    "305": {
+      "nombre": "305",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0264,
+      "coeficienteVoto": 0.032,
+      "propietarioId": "9093216"
+    },
+    "DEPOSITO-5": {
+      "nombre": "Deposito 5",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0007,
+      "coeficienteVoto": 0,
+      "propietarioId": "9093216"
+    },
+    "PARQUEADERO-16": {
+      "nombre": "PARQUEADERO 16",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "9093216"
+    },
+    "306": {
+      "nombre": "306",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0201,
+      "coeficienteVoto": 0.025,
+      "propietarioId": "73109135"
+    },
+    "PARQUEADERO-15": {
+      "nombre": "PARQUEADERO 15",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "73109135"
+    },
+    "401": {
+      "nombre": "401",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0324,
+      "coeficienteVoto": 0.038,
+      "propietarioId": "1047397187"
+    },
+    "PARQUEADERO-17": {
+      "nombre": "PARQUEADERO 17",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1047397187"
+    },
+    "DEPOSITO-4": {
+      "nombre": "Deposito 4",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0007,
+      "coeficienteVoto": 0,
+      "propietarioId": "1047397187"
+    },
+    "402": {
+      "nombre": "402",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.033,
+      "coeficienteVoto": 0.0379,
+      "propietarioId": "52348807"
+    },
+    "PARQUEADERO-20": {
+      "nombre": "PARQUEADERO 20",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "52348807"
+    },
+    "403": {
+      "nombre": "403",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.031,
+      "coeficienteVoto": 0.0359,
+      "propietarioId": "7921248"
+    },
+    "PARQUEADERO-9": {
+      "nombre": "PARQUEADERO 9",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "7921248"
+    },
+    "404": {
+      "nombre": "404",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0311,
+      "coeficienteVoto": 0.036,
+      "propietarioId": "1143368193"
+    },
+    "PARQUEADERO-7": {
+      "nombre": "PARQUEADERO 7",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1143368193"
+    },
+    "405": {
+      "nombre": "405",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0264,
+      "coeficienteVoto": 0.0313,
+      "propietarioId": "9066266"
+    },
+    "PARQUEADERO-14": {
+      "nombre": "PARQUEADERO 14",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "9066266"
+    },
+    "406": {
+      "nombre": "406",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0201,
+      "coeficienteVoto": 0.0257,
+      "propietarioId": "1047397033"
+    },
+    "PARQUEADERO-24": {
+      "nombre": "PARQUEADERO 24",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1047397033"
+    },
+    "DEPOSITO-3": {
+      "nombre": "Deposito 3",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0007,
+      "coeficienteVoto": 0,
+      "propietarioId": "1047397033"
+    },
+    "501": {
+      "nombre": "501",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0324,
+      "coeficienteVoto": 0.038,
+      "propietarioId": "50932645"
+    },
+    "PARQUEADERO-27": {
+      "nombre": "PARQUEADERO 27",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "50932645"
+    },
+    "DEPOSITO-1": {
+      "nombre": "Deposito 1",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0007,
+      "coeficienteVoto": 0,
+      "propietarioId": "50932645"
+    },
+    "502": {
+      "nombre": "502",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.033,
+      "coeficienteVoto": 0.0387,
+      "propietarioId": "900887458-0"
+    },
+    "PARQUEADERO-23": {
+      "nombre": "PARQUEADERO 23",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "900887458-0"
+    },
+    "DEPOSITO-2": {
+      "nombre": "Deposito 2",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0008,
+      "coeficienteVoto": 0,
+      "propietarioId": "900887458-0"
+    },
+    "503": {
+      "nombre": "503",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.031,
+      "coeficienteVoto": 0.0359,
+      "propietarioId": "1143329006"
+    },
+    "PARQUEADERO-10": {
+      "nombre": "PARQUEADERO 10",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1143329006"
+    },
+    "504": {
+      "nombre": "504",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0311,
+      "coeficienteVoto": 0.036,
+      "propietarioId": "900856338-2"
+    },
+    "PARQUEADERO-12": {
+      "nombre": "PARQUEADERO 12",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "900856338-2"
+    },
+    "505": {
+      "nombre": "505",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0264,
+      "coeficienteVoto": 0.0313,
+      "propietarioId": "73096086"
+    },
+    "PARQUEADERO-19": {
+      "nombre": "PARQUEADERO 19",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "73096086"
+    },
+    "506": {
+      "nombre": "506",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0201,
+      "coeficienteVoto": 0.025,
+      "propietarioId": "XDE033297"
+    },
+    "PARQUEADERO-13": {
+      "nombre": "PARQUEADERO 13",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "XDE033297"
+    },
+    "601": {
+      "nombre": "601",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0214,
+      "coeficienteVoto": 0.0263,
+      "propietarioId": "1128048694"
+    },
+    "PARQUEADERO-3": {
+      "nombre": "PARQUEADERO 3",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1128048694"
+    },
+    "602": {
+      "nombre": "602",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0288,
+      "coeficienteVoto": 0.0344,
+      "propietarioId": "1128048694"
+    },
+    "PARQUEADERO-22": {
+      "nombre": "PARQUEADERO 22",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1128048694"
+    },
+    "DEPOSITO-6": {
+      "nombre": "Deposito 6",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0007,
+      "coeficienteVoto": 0,
+      "propietarioId": "1128048694"
+    },
+    "603": {
+      "nombre": "603",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.0366,
+      "coeficienteVoto": 0.0415,
+      "propietarioId": "1051661343"
+    },
+    "PARQUEADERO-25": {
+      "nombre": "PARQUEADERO 25",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "1051661343"
+    },
+    "604": {
+      "nombre": "604",
+      "tipo": "apartamento",
+      "coeficienteRPH": 0.023,
+      "coeficienteVoto": 0.0279,
+      "propietarioId": "33102801"
+    },
+    "PARQUEADERO-26": {
+      "nombre": "PARQUEADERO 26",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0,
+      "propietarioId": "33102801"
+    },
+    "DEPOSITO-7": {
+      "nombre": "Deposito 7",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0071,
+      "coeficienteVoto": 0.0071,
+      "propietarioId": "900856338-2"
+    },
+    "DEPOSITO-8": {
+      "nombre": "Deposito 8",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.0118,
+      "coeficienteVoto": 0.0118,
+      "propietarioId": "900856338-2"
+    },
+    "DEPOSITO-9": {
+      "nombre": "Deposito 9",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.008,
+      "coeficienteVoto": 0.008,
+      "propietarioId": "900856338-2"
+    },
+    "DEPOSITO-10": {
+      "nombre": "Deposito 10",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.008,
+      "coeficienteVoto": 0.008,
+      "propietarioId": "900856338-2"
+    },
+    "DEPOSITO-11": {
+      "nombre": "Deposito 11",
+      "tipo": "deposito",
+      "coeficienteRPH": 0.008,
+      "coeficienteVoto": 0.008,
+      "propietarioId": "900856338-2"
+    },
+    "PARQUEADERO-29": {
+      "nombre": "PARQUEADERO 29",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0.0049,
+      "propietarioId": "900856338-2"
+    },
+    "PARQUEADERO-30": {
+      "nombre": "PARQUEADERO 30",
+      "tipo": "parqueadero",
+      "coeficienteRPH": 0.0049,
+      "coeficienteVoto": 0.0049,
+      "propietarioId": "900856338-2"
+    }
+  }
+}

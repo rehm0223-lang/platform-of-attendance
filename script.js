@@ -7,23 +7,16 @@ import {
   onValue,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBMNSjmM7sHC184DiMzzm8GmmMKTve4Ufc",
-  authDomain: "coloquio-forms.firebaseapp.com",
-  databaseURL: "https://coloquio-forms-default-rtdb.firebaseio.com",
-  projectId: "coloquio-forms",
-  storageBucket: "coloquio-forms.firebasestorage.app",
-  messagingSenderId: "170188483453",
-  appId: "1:170188483453:web:bddbe9d3ab358b70947a14",
-  measurementId: "G-70YCGNV82V",
-};
+// La configuración vive en config.js, que no se sube al repositorio.
+// Si acabas de clonar el proyecto, copia config.example.js como config.js.
+import { firebaseConfig } from "./config.js";
 
 const app = initializeApp(firebaseConfig);
 export const db = getDatabase(app);
 
 const CLAVE_SESION = "sesion";
 const QUORUM_MINIMO = 0.5; // se inicia con más del 50% del coeficiente
-const PAGINAS_ADMIN = ["dashboard", "apoderados", "preguntas", "reporte"];
+const PAGINAS_ADMIN = ["dashboard", "propietarios","apoderados", "preguntas", "reporte"];
 
 function guardarSesion(datos) {
   sessionStorage.setItem(CLAVE_SESION, JSON.stringify(datos));
