@@ -16,7 +16,7 @@ export const db = getDatabase(app);
 
 const CLAVE_SESION = "sesion";
 const QUORUM_MINIMO = 0.5; // se inicia con más del 50% del coeficiente
-const PAGINAS_ADMIN = ["dashboard", "propietarios","apoderados", "preguntas", "reporte"];
+const PAGINAS_ADMIN = ["dashboard", "propietarios", "apoderados", "poderes", "preguntas", "reporte"];
 
 function guardarSesion(datos) {
   sessionStorage.setItem(CLAVE_SESION, JSON.stringify(datos));
@@ -478,7 +478,7 @@ async function iniciarDashboard(sesion) {
     const contenedor = document.getElementById("tablaImpresion");
     if (!contenedor) return;
 
-    if (sello) {
+    if (sello && !sello.textContent.trim()) {
       sello.textContent =
         "Generado el " +
         new Date().toLocaleString("es-CO", {

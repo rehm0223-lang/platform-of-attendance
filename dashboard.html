@@ -26,11 +26,13 @@
     <div class="marco">
       <nav class="lateral" aria-label="Secciones">
         <a class="lateral-item" href="dashboard.html" aria-current="page"
-          >Asistencia</a>
-         <a class="lateral-item" href="propietarios.html">Propietarios</a>
-         <a class="lateral-item" href="apoderados.html">Apoderados</a>
+          >Asistencia</a
+        >
+        <a class="lateral-item" href="propietarios.html">Propietarios</a>
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
         <a class="lateral-item" href="preguntas.html">Preguntas</a>
         <a class="lateral-item" href="reporte.html">Reporte</a>
+        <a class="lateral-item" href="poderes.html">Poderes</a>
       </nav>
 
       <main class="vista">
@@ -46,7 +48,25 @@
           </button>
         </div>
 
-        <p class="solo-impresion" id="selloImpresion"></p>
+        <!--
+          Encabezado del PDF. No se ve en pantalla.
+          Para la próxima asamblea, cambia estas dos líneas y ya.
+        -->
+        <div class="solo-impresion encabezado-pdf">
+          <h2>
+            VERIFICACIÓN QUÓRUM ASAMBLEA EXTRAORDINARIA PRIMERA CONVOCATORIA
+          </h2>
+          <p>8 DE AGOSTO DE 2026 &middot; EDIFICIO MIRADOR DE LA VILLA</p>
+        </div>
+
+        <!--
+          Fecha y hora que aparece en el PDF. Escríbela a mano para que
+          corresponda al cierre de la reunión. Si lo dejas vacío, el sistema
+          pone la fecha y hora en que se generó el archivo.
+        -->
+        <p class="solo-impresion" id="selloImpresion">
+          Cerrada el 8 de agosto de 2026 a las 2:24 p. m.
+        </p>
 
         <section class="panel" id="panelQuorum">
           <p class="eyebrow">Coeficiente presente</p>

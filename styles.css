@@ -1243,3 +1243,71 @@ h1 {
 .campo input[type="number"] {
   max-width: 200px;
 }
+
+
+/* ---------- Encabezado del PDF ----------
+   Va al final de styles.css. */
+
+@media print {
+  /* En el PDF manda el título de la asamblea, no el de la pantalla. */
+  .titulo-con-accion {
+    display: none !important;
+  }
+
+  .encabezado-pdf {
+    display: block;
+    margin: 0 0 4px;
+    text-align: center;
+  }
+
+  .encabezado-pdf h2 {
+    font-family: "Bricolage Grotesque", "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--tinta);
+    margin: 0;
+  }
+
+  .encabezado-pdf p {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--tinta-suave);
+    margin: 5px 0 0;
+  }
+
+  #selloImpresion {
+    text-align: center;
+    margin: 2px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--acento);
+  }
+
+  /* ---------- Vista de poderes ----------
+   Va al final de styles.css. */
+
+.inmuebles-check {
+  border: 1px solid var(--borde);
+  border-radius: 2px;
+  padding: 12px 14px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.inmuebles-check .check {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.inmuebles-check .check:last-of-type {
+  margin-bottom: 0;
+}
+
+.inmuebles-check .ayuda {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--fondo);
+}
+}

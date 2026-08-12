@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apoderados — Asamblea RPH</title>
+    <title>Poderes — Asamblea RPH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-pagina="apoderados">
+  <body data-pagina="poderes">
     <header class="barra">
       <p class="eyebrow">Asamblea &middot; RPH</p>
       <div class="barra-fin">
@@ -27,27 +27,33 @@
       <nav class="lateral" aria-label="Secciones">
         <a class="lateral-item" href="dashboard.html">Asistencia</a>
         <a class="lateral-item" href="propietarios.html">Propietarios</a>
-        
-        <a class="lateral-item" href="apoderados.html" aria-current="page">Apoderados</a>
+        <a class="lateral-item" href="apoderados.html">Apoderados</a>
         <a class="lateral-item" href="preguntas.html">Preguntas</a>
-        
         <a class="lateral-item" href="reporte.html">Reporte</a>
-        <a class="lateral-item" href="poderes.html">Poderes</a>
+        
+        <a class="lateral-item" href="poderes.html" aria-current="page">Poderes</a>
       </nav>
 
       <main class="vista">
-        <h1>Apoderados</h1>
+        <h1>Poderes por inmueble</h1>
         <p class="sub">
-          Registra quién entra en representación de cada propietario. El
-          apoderado ingresa con su cédula como usuario y como contraseña.
+          Cuando un propietario reparte el poder entre varias personas, aquí se
+          separan sus inmuebles para que cada apoderado vote solo por los suyos.
         </p>
 
         <section class="panel">
-          <p class="eyebrow" id="tituloFormulario">Nuevo apoderado</p>
+          <p class="eyebrow" id="tituloFormulario">Otorgar poder</p>
 
           <div class="campo">
-            <label for="propietario">Propietario que representa</label>
+            <label for="propietario">Propietario que otorga</label>
             <select id="propietario"></select>
+          </div>
+
+          <div class="campo">
+            <label>Inmuebles que entrega</label>
+            <div class="inmuebles-check" id="inmuebles">
+              <p class="ayuda">Elige primero un propietario.</p>
+            </div>
           </div>
 
           <div class="campo">
@@ -55,7 +61,7 @@
             <input
               type="text"
               id="cedula"
-              placeholder="1128048694"
+              placeholder="73183949"
               autocomplete="off"
               autocapitalize="none"
               spellcheck="false"
@@ -72,30 +78,17 @@
             />
           </div>
 
-          <p class="error" id="errorApoderado" hidden></p>
-          <p class="guardado" id="notaApoderado" hidden></p>
+          <p class="error" id="errorPoder" hidden></p>
+          <p class="guardado" id="notaPoder" hidden></p>
 
           <div class="acciones">
-            <button type="button" class="btn btn-auto" id="btnGuardar">
-              Guardar apoderado
-            </button>
-            <button type="button" class="btn-texto" id="btnCancelar" hidden>
-              Cancelar edición
+            <button type="button" class="btn btn-auto" id="btnOtorgar">
+              Otorgar poder
             </button>
           </div>
         </section>
 
         <div class="herramientas">
-          <input
-            type="search"
-            id="buscador"
-            placeholder="Buscar por propietario, inmueble o cédula"
-            autocomplete="off"
-          />
-          <label class="check">
-            <input type="checkbox" id="soloConApoderado" />
-            Solo con apoderado
-          </label>
           <span class="conteo" id="conteoLista"></span>
         </div>
 
@@ -104,6 +97,6 @@
     </div>
 
     <script type="module" src="script.js"></script>
-    <script type="module" src="apoderados.js"></script>
+    <script type="module" src="poderes.js"></script>
   </body>
 </html>

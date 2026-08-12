@@ -32,7 +32,7 @@
       "coeficienteRPH": 0.0264,
       "coeficienteVoto": 0.0313,
       "nombre": "205",
-      "propietarioId": "9066266",
+      "propietarioId": "73183949",
       "tipo": "apartamento"
     },
     "206": {
@@ -116,7 +116,7 @@
       "coeficienteRPH": 0.0264,
       "coeficienteVoto": 0.0313,
       "nombre": "405",
-      "propietarioId": "9066266",
+      "propietarioId": "45530304",
       "tipo": "apartamento"
     },
     "406": {
@@ -312,7 +312,7 @@
       "coeficienteRPH": 0.0049,
       "coeficienteVoto": 0,
       "nombre": "PARQUEADERO 14",
-      "propietarioId": "9066266",
+      "propietarioId": "45530304",
       "tipo": "parqueadero"
     },
     "PARQUEADERO-15": {
@@ -484,34 +484,12 @@
       "tipo": "parqueadero"
     }
   },
-  "preguntas": {
-    "-OzRqSkAgtgbHmwN8bME": {
-      "cierre": 1786142170616,
-      "duracion": 1,
-      "inicio": 1786142110616,
-      "multiple": false,
-      "opciones": [
-        "Sí",
-        "No"
-      ],
-      "orden": 1,
-      "tipo": "cerrada",
-      "titulo": "aprueba esto?"
-    }
-  },
   "propietarios": {
     "7921248": {
       "apoderado": "",
-      "apoderados": [
-        {
-          "identificacion": "987654321",
-          "nombre": "Sandra meza"
-        }
-      ],
-      "asistio": true,
+      "asistio": false,
       "identificacion": "7921248",
-      "nombre": "WALTER REYES Y LILIANA VALENCIA",
-      "registroAsistencia": 1786135859497
+      "nombre": "WALTER REYES Y LILIANA VALENCIA"
     },
     "9063328": {
       "apoderado": "",
@@ -519,11 +497,36 @@
       "identificacion": "9063328",
       "nombre": "PEDRO GARCIA ECHENIQUIE"
     },
+    
+    "45530304": {
+      "apoderado": "",
+      "asistio": false,
+      "identificacion": "45530304",
+      "nombre": "ASTRID CALDERON"
+    },
+
     "9066266": {
       "apoderado": "ASTRID CALDERON",
-      "asistio": false,
+      "apoderados": [
+        
+        {
+          "identificacion": "73183949",
+          "nombre": "DAVID J. CALDERÓN CORREA"
+        },
+        {
+          "identificacion": "73569684",
+          "nombre": "Luis Calderon"
+        }
+      ],
+      "asistio": true,
       "identificacion": "9066266",
-      "nombre": "PEDRO MANUEL CALDERON MEJIA"
+      "nombre": "PEDRO MANUEL CALDERON MEJIA",
+      "registradoPor": {
+        "identificacion": "73569684",
+        "nombre": "Luis Calderon",
+        "tipo": "apoderado"
+      },
+      "registroAsistencia": 1786215584215
     },
     "9093216": {
       "apoderado": "",
@@ -531,41 +534,52 @@
       "identificacion": "9093216",
       "nombre": "VENTURA  CASTRO CARMONA"
     },
-    "32936726": {
-      "apoderados": [
-        {
-          "identificacion": "123456789",
-          "nombre": "Tomas Massa"
-        }
-      ],
-      "asistio": true,
-      "identificacion": "32936726",
-      "nombre": "DIANA CAROLINA ALVIS YEPES",
-      "registroAsistencia": 1786142749026
-    },
     "32909386": {
       "apoderado": "",
       "asistio": false,
       "identificacion": "32909386",
       "nombre": "JENNIFER LOPEZ DIAZ"
     },
+    "32936726": {
+      "asistio": false,
+      "identificacion": "32936726",
+      "nombre": "DIANA CAROLINA ALVIS YEPES"
+    },
     "45547332": {
       "apoderado": "",
-      "asistio": false,
+      "asistio": true,
       "identificacion": "45547332",
-      "nombre": "DIANA PAOLA BARRIOS GARALAGA"
+      "nombre": "DIANA PAOLA BARRIOS GARALAGA",
+      "registradoPor": {
+        "identificacion": "45547332",
+        "nombre": "DIANA PAOLA BARRIOS GARALAGA",
+        "tipo": "propietario"
+      },
+      "registroAsistencia": 1786215632699
     },
     "50932645": {
       "apoderado": "",
-      "asistio": false,
+      "asistio": true,
       "identificacion": "50932645",
-      "nombre": "MONICA BUENDIA REYES"
+      "nombre": "MONICA BUENDIA REYES",
+      "registradoPor": {
+        "identificacion": "50932645",
+        "nombre": "MONICA BUENDIA REYES",
+        "tipo": "propietario"
+      },
+      "registroAsistencia": 1786215529198
     },
     "52348807": {
       "apoderado": "",
-      "asistio": false,
+      "asistio": true,
       "identificacion": "52348807",
-      "nombre": "PATRICIA EMILCE ROMERO MURILLO  Y RICARDO SARMIENTO"
+      "nombre": "PATRICIA EMILCE ROMERO MURILLO  Y RICARDO SARMIENTO",
+      "registradoPor": {
+        "identificacion": "52348807",
+        "nombre": "PATRICIA EMILCE ROMERO MURILLO  Y RICARDO SARMIENTO",
+        "tipo": "propietario"
+      },
+      "registroAsistencia": 1786215659257
     },
     "73096086": {
       "apoderado": "",
@@ -617,10 +631,9 @@
     },
     "1051661343": {
       "apoderado": "",
-      "asistio": true,
+      "asistio": false,
       "identificacion": "1051661343",
-      "nombre": "ANA  MARIA ACUÑA BELEÑO",
-      "registroAsistencia": 1786142019663
+      "nombre": "ANA  MARIA ACUÑA BELEÑO"
     },
     "1128048694": {
       "apoderado": "",
@@ -630,9 +643,15 @@
     },
     "1143329006": {
       "apoderado": "",
-      "asistio": false,
+      "asistio": true,
       "identificacion": "1143329006",
-      "nombre": "VANESSA ALVAREZ Y MARCO GARCIA"
+      "nombre": "VANESSA ALVAREZ Y MARCO GARCIA",
+      "registradoPor": {
+        "identificacion": "1143329006",
+        "nombre": "VANESSA ALVAREZ Y MARCO GARCIA",
+        "tipo": "propietario"
+      },
+      "registroAsistencia": 1786215138739
     },
     "1143368193": {
       "apoderado": "",
@@ -648,10 +667,9 @@
           "nombre": "CAROLINA ALVIS YEPES"
         }
       ],
-      "asistio": true,
+      "asistio": false,
       "identificacion": "900856338-2",
-      "nombre": "PROMOTORA MIRADOR DE LA VILLA",
-      "registroAsistencia": 1786137725602
+      "nombre": "PROMOTORA MIRADOR DE LA VILLA"
     },
     "900887458-0": {
       "apoderado": "",
@@ -710,6 +728,20 @@
         "valor": "Sí",
         "votadaPor": "123456789"
       }
+    },
+    "-OzUbHbl34qWeAdnpyw7": {
+      "7921248": {
+        "fecha": 1786163079839,
+        "valor": "No",
+        "votadaPor": "987654321"
+      }
+    },
+    "-OzUbkNG-bOCYTGwT1sd": {
+      "7921248": {
+        "fecha": 1786163217403,
+        "valor": "Sí",
+        "votadaPor": "987654321"
+      }
     }
   },
   "usuarios": {
@@ -733,15 +765,15 @@
       "type": "1",
       "user": "9093216"
     },
-    "32936726": {
-      "password": "32936726",
-      "type": "1",
-      "user": "32936726"
-    },
     "32909386": {
       "password": "32909386",
       "type": "1",
       "user": "32909386"
+    },
+    "32936726": {
+      "password": "32936726",
+      "type": "1",
+      "user": "32936726"
     },
     "45547332": {
       "password": "45547332",
