@@ -305,11 +305,13 @@ async function iniciarReporte() {
         filas[0] || { fraccion: 0, opcion: "—" },
       );
 
+      // En el centro va solo la cifra: el nombre de la opción se desborda
+      // cuando es largo, y ya está en el cuadro de al lado con su color.
       panel.append(
         anilloCon(
           filas,
           coeficienteVotado > 0 ? porcentaje(lider.fraccion) + "%" : "—",
-          coeficienteVotado > 0 ? lider.opcion : "sin votos",
+          coeficienteVotado > 0 ? "más votado" : "sin votos",
         ),
       );
     }

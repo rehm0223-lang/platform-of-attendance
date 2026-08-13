@@ -140,63 +140,18 @@
     "7921248": {
       "identificacion": "7921248",
       "nombre": "WALTER REYES Y LILIANA VALENCIA",
-      "asistio": false
+      "asistio": false,
+      "apoderados": [
+        {
+          "identificacion": "73570352",
+          "nombre": "Antonio Diaz Buelvas"
+        }
+      ]
     },
     "9063328": {
       "identificacion": "9063328",
       "nombre": "PEDRO GARCIA ECHENIQUIE",
       "asistio": false
-    },
-    "9066266-205": {
-      "identificacion": "9066266-205",
-      "nombre": "PEDRO MANUEL CALDERON MEJIA — 205",
-      "asistio": false,
-      "apoderados": [
-        {
-          "identificacion": "73183949",
-          "nombre": "DAVID J. CALDERON CORREA"
-        },
-        {
-          "identificacion": "9066266",
-          "nombre": "PEDRO MANUEL CALDERON MEJIA"
-        }
-      ]
-    },
-    "9066266-302": {
-      "identificacion": "9066266-302",
-      "nombre": "PEDRO MANUEL CALDERON MEJIA — 302",
-      "asistio": true,
-      "apoderados": [
-        {
-          "identificacion": "73569684",
-          "nombre": "LUIS A. CALDERON CORREA"
-        },
-        {
-          "identificacion": "9066266",
-          "nombre": "PEDRO MANUEL CALDERON MEJIA"
-        }
-      ],
-      "registroAsistencia": 1786215584215,
-      "registradoPor": {
-        "identificacion": "73569684",
-        "nombre": "LUIS A. CALDERON CORREA",
-        "tipo": "apoderado"
-      }
-    },
-    "9066266-405": {
-      "identificacion": "9066266-405",
-      "nombre": "PEDRO MANUEL CALDERON MEJIA — 405",
-      "asistio": false,
-      "apoderados": [
-        {
-          "identificacion": "45530304",
-          "nombre": "ASTRID E. CALDERON CORREA"
-        },
-        {
-          "identificacion": "9066266",
-          "nombre": "PEDRO MANUEL CALDERON MEJIA"
-        }
-      ]
     },
     "9093216": {
       "identificacion": "9093216",
@@ -211,19 +166,13 @@
     "32936726": {
       "identificacion": "32936726",
       "nombre": "DIANA CAROLINA ALVIS YEPES",
-      "asistio": true,
-      "registroAsistencia": 1786221251936,
-      "registradoPor": {
-        "identificacion": "32936726",
-        "nombre": "DIANA CAROLINA ALVIS YEPES",
-        "tipo": "propietario"
-      }
+      "asistio": false
     },
     "45547332": {
       "identificacion": "45547332",
       "nombre": "DIANA PAOLA BARRIOS GARALAGA",
       "asistio": true,
-      "registroAsistencia": 1786215632699,
+      "registroAsistencia": 1786579766767,
       "registradoPor": {
         "identificacion": "45547332",
         "nombre": "DIANA PAOLA BARRIOS GARALAGA",
@@ -234,7 +183,7 @@
       "identificacion": "50932645",
       "nombre": "MONICA BUENDIA REYES",
       "asistio": true,
-      "registroAsistencia": 1786215529198,
+      "registroAsistencia": 1786579605935,
       "registradoPor": {
         "identificacion": "50932645",
         "nombre": "MONICA BUENDIA REYES",
@@ -245,7 +194,7 @@
       "identificacion": "52348807",
       "nombre": "PATRICIA EMILCE ROMERO MURILLO Y RICARDO SARMIENTO",
       "asistio": true,
-      "registroAsistencia": 1786215659257,
+      "registroAsistencia": 1786579282403,
       "registradoPor": {
         "identificacion": "52348807",
         "nombre": "PATRICIA EMILCE ROMERO MURILLO Y RICARDO SARMIENTO",
@@ -255,13 +204,7 @@
     "73096086": {
       "identificacion": "73096086",
       "nombre": "LEON RAMIRO PATERNINA P",
-      "asistio": true,
-      "registroAsistencia": 1786216312444,
-      "registradoPor": {
-        "identificacion": "73096086",
-        "nombre": "LEON RAMIRO PATERNINA P",
-        "tipo": "propietario"
-      }
+      "asistio": false
     },
     "73109135": {
       "identificacion": "73109135",
@@ -283,7 +226,7 @@
       "identificacion": "1044912391",
       "nombre": "SERGIO FIGUEROA ESPINOSA",
       "asistio": true,
-      "registroAsistencia": 1786220296800,
+      "registroAsistencia": 1786579189755,
       "registradoPor": {
         "identificacion": "1044912391",
         "nombre": "SERGIO FIGUEROA ESPINOSA",
@@ -294,7 +237,7 @@
       "identificacion": "1047381349",
       "nombre": "FELIX RICARDO LEAL MERCADO",
       "asistio": true,
-      "registroAsistencia": 1786215989401,
+      "registroAsistencia": 1786579175890,
       "registradoPor": {
         "identificacion": "1047381349",
         "nombre": "FELIX RICARDO LEAL MERCADO",
@@ -304,24 +247,12 @@
     "1047397033": {
       "identificacion": "1047397033",
       "nombre": "LUIS GUILLERMO CABARCAS",
-      "asistio": true,
-      "registroAsistencia": 1786220341493,
-      "registradoPor": {
-        "identificacion": "1047397033",
-        "nombre": "LUIS GUILLERMO CABARCAS",
-        "tipo": "propietario"
-      }
+      "asistio": false
     },
     "1047397187": {
       "identificacion": "1047397187",
       "nombre": "FRANCEDY VASCO RESTREPO",
-      "asistio": true,
-      "registroAsistencia": 1786219054794,
-      "registradoPor": {
-        "identificacion": "1047397187",
-        "nombre": "FRANCEDY VASCO RESTREPO",
-        "tipo": "propietario"
-      }
+      "asistio": false
     },
     "1051661343": {
       "identificacion": "1051661343",
@@ -337,7 +268,7 @@
       "identificacion": "1143329006",
       "nombre": "VANESSA ALVAREZ Y MARCO GARCIA",
       "asistio": true,
-      "registroAsistencia": 1786215138739,
+      "registroAsistencia": 1786579191109,
       "registradoPor": {
         "identificacion": "1143329006",
         "nombre": "VANESSA ALVAREZ Y MARCO GARCIA",
@@ -347,7 +278,13 @@
     "1143368193": {
       "identificacion": "1143368193",
       "nombre": "JESUS DE AVILA BOHORQUEZ",
-      "asistio": false
+      "asistio": true,
+      "registroAsistencia": 1786579929315,
+      "registradoPor": {
+        "identificacion": "1143368193",
+        "nombre": "JESUS DE AVILA BOHORQUEZ",
+        "tipo": "propietario"
+      }
     },
     "900856338-2": {
       "identificacion": "900856338-2",
@@ -363,12 +300,41 @@
     "900887458-0": {
       "identificacion": "900887458-0",
       "nombre": "KADALE SAS",
-      "asistio": false
+      "asistio": true,
+      "apoderados": [
+        {
+          "identificacion": "1047469685",
+          "nombre": "EYRLEN PATRICIA QUINTANA MARRUGO"
+        }
+      ],
+      "registroAsistencia": 1786579361331,
+      "registradoPor": {
+        "identificacion": "1047469685",
+        "nombre": "EYRLEN PATRICIA QUINTANA MARRUGO",
+        "tipo": "apoderado"
+      }
     },
     "XDE033297": {
       "identificacion": "XDE033297",
       "nombre": "RICCARDO MARRA",
       "asistio": false
+    },
+    "9066266": {
+      "identificacion": "9066266",
+      "nombre": "PEDRO MANUEL CALDERON MEJIA",
+      "asistio": true,
+      "apoderados": [
+        {
+          "identificacion": "45530304",
+          "nombre": "ASTRID E. CALDERON CORREA"
+        }
+      ],
+      "registroAsistencia": 1786579620009,
+      "registradoPor": {
+        "identificacion": "45530304",
+        "nombre": "ASTRID E. CALDERON CORREA",
+        "tipo": "apoderado"
+      }
     }
   },
   "inmuebles": {
@@ -404,7 +370,7 @@
       "coeficienteRPH": 0.0264,
       "coeficienteVoto": 0.0313,
       "nombre": "205",
-      "propietarioId": "9066266-205",
+      "propietarioId": "9066266",
       "tipo": "apartamento"
     },
     "206": {
@@ -425,7 +391,7 @@
       "coeficienteRPH": 0.033,
       "coeficienteVoto": 0.0379,
       "nombre": "302",
-      "propietarioId": "9066266-302",
+      "propietarioId": "9066266",
       "tipo": "apartamento"
     },
     "303": {
@@ -488,7 +454,7 @@
       "coeficienteRPH": 0.0264,
       "coeficienteVoto": 0.0313,
       "nombre": "405",
-      "propietarioId": "9066266-405",
+      "propietarioId": "9066266",
       "tipo": "apartamento"
     },
     "406": {
@@ -677,7 +643,7 @@
       "coeficienteRPH": 0.0049,
       "coeficienteVoto": 0,
       "nombre": "PARQUEADERO 5",
-      "propietarioId": "9066266-205",
+      "propietarioId": "9066266",
       "tipo": "parqueadero"
     },
     "PARQUEADERO-6": {
@@ -698,7 +664,7 @@
       "coeficienteRPH": 0.0049,
       "coeficienteVoto": 0,
       "nombre": "PARQUEADERO 8",
-      "propietarioId": "9066266-302",
+      "propietarioId": "9066266",
       "tipo": "parqueadero"
     },
     "PARQUEADERO-9": {
@@ -740,7 +706,7 @@
       "coeficienteRPH": 0.0049,
       "coeficienteVoto": 0,
       "nombre": "PARQUEADERO 14",
-      "propietarioId": "9066266-405",
+      "propietarioId": "9066266",
       "tipo": "parqueadero"
     },
     "PARQUEADERO-15": {
@@ -857,7 +823,7 @@
     }
   },
   "preguntas": {
-    "punto-1": {
+    "-OzsTWsps1nQ2wHsv8dQ": {
       "titulo": "¿Quién está de acuerdo con la designación de la señora ASTRID CALDERON como presidente de la asamblea extraordinaria?",
       "tipo": "cerrada",
       "opciones": [
@@ -865,70 +831,451 @@
         "No"
       ],
       "multiple": false,
-      "duracion": 5,
-      "orden": 1
+      "duracion": 2,
+      "orden": 1,
+      "inicio": 1786580612530,
+      "cierre": 1786580732530
     },
-    "punto-2": {
+    "-OzsW-V-aKEoyDJ0FU2C": {
+      "titulo": "¿Quién está de acuerdo con la designación del señor Sergio Figueroa como integrante de la comisión verificadora del acta?",
+      "tipo": "cerrada",
+      "opciones": [
+        "Sí",
+        "No"
+      ],
+      "multiple": false,
+      "duracion": 1,
+      "orden": 2,
+      "inicio": 1786580935573,
+      "cierre": 1786580995573
+    },
+    "-Ozssnx33h5JrTBi3NqX": {
+      "titulo": "¿Quién aprueba la derogación de la cuota extraordinaria previamente aprobada en la asamblea del 2 de mayo de 2026, para ser facturada en el mes de diciembre de la misma anualidad?",
+      "tipo": "cerrada",
+      "opciones": [
+        "Sí",
+        "No"
+      ],
+      "multiple": false,
+      "duracion": 2,
+      "orden": 3,
+      "inicio": 1786587167757,
+      "cierre": 1786587287757
+    },
+    "-Ozsv508tqtMjXNb6fsQ": {
       "titulo": "¿Cuál propuesta aprueba para la contratación del sistema de control de acceso?",
       "tipo": "cerrada",
       "opciones": [
-        "La de juan",
-        "La de jesus",
-        "La de will",
-        "La de quique"
+        "plustec SAS",
+        "inredes SAS",
+        "sumicon SAS"
       ],
       "multiple": false,
       "duracion": 5,
-      "orden": 2
+      "orden": 4,
+      "inicio": 1786588236803,
+      "cierre": 1786588536803
     },
-    "punto-3": {
-      "titulo": "¿Aprueba cuota extraordinaria para ser facturada el 15 de agosto de 2026 como único medio de financiación para la implementación del control de acceso?",
+    "-OzsyxaUjfWGjFLgYdfl": {
+      "titulo": "¿Qué opción del sistema de control de acceso propuesto por Inredes aprueba?",
       "tipo": "cerrada",
       "opciones": [
-        "10000",
-        "20000",
-        "100000",
-        "250000",
-        "345600"
+        "Control de acceso peatonal y vehicular con pantalla",
+        "Control de acceso peatonal y vehicular sin pantalla"
       ],
       "multiple": false,
-      "duracion": 5,
-      "orden": 3
+      "duracion": 1,
+      "orden": 5,
+      "inicio": 1786588695408,
+      "cierre": 1786588755408
     },
-    "punto-4": {
-      "titulo": "¿Aprueba la contratación de una empresa que realice el suministro de todero con cobertura de domingo a domingo?",
+    "-Ozt0VH8LAZW3KGwuTP9": {
+      "titulo": "¿Cuál de las siguientes fechas de inicio de la implementación del sistema de control de acceso aprueba?",
       "tipo": "cerrada",
       "opciones": [
-        "Sí",
-        "No"
+        "19/08/2026",
+        "26/08/2026"
       ],
       "multiple": false,
-      "duracion": 5,
-      "orden": 4
+      "duracion": 2,
+      "orden": 6,
+      "inicio": 1786589360719,
+      "cierre": 1786590932290
     },
-    "punto-5": {
-      "titulo": "¿Qué opciones de suministro de personal aprueba?",
-      "tipo": "cerrada",
-      "opciones": [
-        "Contratación de una empresa que realice el suministro de todero con cobertura de domingo a domingo",
-        "Esquema mixto de todero diurno de lunes a sábado 42 horas semanales y apoyo de conserjería/seguridad nocturna",
-        "Esquema mixto de todero diurno de lunes a sábado 42 horas semanales y apoyo de conserjería lunes en la noche, miércoles en la mañana y jueves en la noche en turnos de 12 horas",
-        "Un todero como persona natural"
-      ],
-      "multiple": false,
-      "duracion": 5,
-      "orden": 5
-    },
-    "punto-6": {
-      "titulo": "¿Aprueba la elección de los consejeros xxx y xxx para culminar el periodo 2026 – 2027?",
+    "-Ozt6YY-WqpqTKA7HL_g": {
+      "titulo": "¿Aprueba cuota extraordinaria por valor de 29.000.000 para ser facturada la mitad el 14 de agosto y la otra mitad el 14 de septiembre de 2026, cómo único medio de financiación para la implementación del control de acceso?",
       "tipo": "cerrada",
       "opciones": [
         "Sí",
         "No"
       ],
       "multiple": false,
-      "duracion": 5,
-      "orden": 6
+      "duracion": 3,
+      "orden": 7,
+      "inicio": 1786593461409,
+      "cierre": 1786593641409
+    },
+    "-OztLEJaLQFtFDYh5Y4l": {
+      "titulo": "¿Qué opciones de suministro de personal aprueba a partir del 1 de octubre de 2026?",
+      "tipo": "cerrada",
+      "opciones": [
+        "Todero 7 horas de lunes a domingos con la empresa Sogercol",
+        "Servicio aseo general y Todero 12 horas de lunes a lunes con la empresa Spercol",
+        "Servicio aseo general y todero 42 horas semanales diurnas de lunes a sábado, no se incluye domingo y festivos con la empresa Spercol"
+      ],
+      "multiple": false,
+      "duracion": 3,
+      "orden": 8,
+      "inicio": 1786594801096,
+      "cierre": 1786594981096
+    }
+  },
+  "respuestas": {
+    "-OzsTWsps1nQ2wHsv8dQ": {
+      "45547332": {
+        "fecha": 1786580232565,
+        "valor": "Sí",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786580653997,
+        "valor": "Sí",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786580217340,
+        "valor": "Sí",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786580232164,
+        "valor": "Sí",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786580304664,
+        "valor": "Sí",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786580239790,
+        "valor": "Sí",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786580490303,
+        "valor": "Sí",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786580275164,
+        "valor": "Sí",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786580311362,
+        "valor": "Sí",
+        "votadaPor": "45530304"
+      }
+    },
+    "-OzsW-V-aKEoyDJ0FU2C": {
+      "45547332": {
+        "fecha": 1786580869630,
+        "valor": "Sí",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786580874090,
+        "valor": "Sí",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786580878350,
+        "valor": "Sí",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786580886484,
+        "valor": "Sí",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786580920107,
+        "valor": "Sí",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786580869219,
+        "valor": "Sí",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786580868143,
+        "valor": "Sí",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786580869438,
+        "valor": "Sí",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786580870102,
+        "valor": "Sí",
+        "votadaPor": "45530304"
+      }
+    },
+    "-Ozssnx33h5JrTBi3NqX": {
+      "45547332": {
+        "fecha": 1786587179310,
+        "valor": "Sí",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786587200624,
+        "valor": "No",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786587170728,
+        "valor": "Sí",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786587188416,
+        "valor": "Sí",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786587190122,
+        "valor": "No",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786587196304,
+        "valor": "Sí",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786587213347,
+        "valor": "Sí",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786587202108,
+        "valor": "Sí",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786587193182,
+        "valor": "Sí",
+        "votadaPor": "45530304"
+      }
+    },
+    "-Ozsv508tqtMjXNb6fsQ": {
+      "45547332": {
+        "fecha": 1786588327795,
+        "valor": "inredes SAS",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786588274748,
+        "valor": "inredes SAS",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786588247554,
+        "valor": "plustec SAS",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786588255866,
+        "valor": "inredes SAS",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786588245833,
+        "valor": "plustec SAS",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786588258870,
+        "valor": "inredes SAS",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786588300400,
+        "valor": "inredes SAS",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786588321998,
+        "valor": "inredes SAS",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786588330390,
+        "valor": "sumicon SAS",
+        "votadaPor": "45530304"
+      }
+    },
+    "-OzsyxaUjfWGjFLgYdfl": {
+      "45547332": {
+        "fecha": 1786588723572,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786588748941,
+        "valor": "Control de acceso peatonal y vehicular con pantalla",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786588701916,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786588738083,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786588709974,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786588699929,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786588711617,
+        "valor": "Control de acceso peatonal y vehicular con pantalla",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786588712776,
+        "valor": "Control de acceso peatonal y vehicular sin pantalla",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786588710165,
+        "valor": "Control de acceso peatonal y vehicular con pantalla",
+        "votadaPor": "45530304"
+      }
+    },
+    "-Ozt0VH8LAZW3KGwuTP9": {
+      "45547332": {
+        "fecha": 1786589368887,
+        "valor": "26/08/2026",
+        "votadaPor": "45547332"
+      },
+      "50932645": {
+        "fecha": 1786589391649,
+        "valor": "26/08/2026",
+        "votadaPor": "50932645"
+      },
+      "52348807": {
+        "fecha": 1786589369069,
+        "valor": "26/08/2026",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786589366306,
+        "valor": "26/08/2026",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786589376920,
+        "valor": "19/08/2026",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786589371292,
+        "valor": "26/08/2026",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786589373845,
+        "valor": "26/08/2026",
+        "votadaPor": "1143368193"
+      },
+      "900887458-0": {
+        "fecha": 1786589380508,
+        "valor": "26/08/2026",
+        "votadaPor": "1047469685"
+      },
+      "9066266": {
+        "fecha": 1786589392503,
+        "valor": "19/08/2026",
+        "votadaPor": "45530304"
+      }
+    },
+    "-Ozt6YY-WqpqTKA7HL_g": {
+      "45547332": {
+        "fecha": 1786593507337,
+        "valor": "Sí",
+        "votadaPor": "45547332"
+      },
+      "52348807": {
+        "fecha": 1786593463819,
+        "valor": "No",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786593468835,
+        "valor": "Sí",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786593474033,
+        "valor": "Sí",
+        "votadaPor": "1047381349"
+      },
+      "1143329006": {
+        "fecha": 1786593467126,
+        "valor": "Sí",
+        "votadaPor": "1143329006"
+      },
+      "1143368193": {
+        "fecha": 1786593482462,
+        "valor": "Sí",
+        "votadaPor": "1143368193"
+      },
+      "9066266": {
+        "fecha": 1786593490696,
+        "valor": "Sí",
+        "votadaPor": "45530304"
+      }
+    },
+    "-OztLEJaLQFtFDYh5Y4l": {
+      "52348807": {
+        "fecha": 1786594825888,
+        "valor": "Servicio aseo general y todero 42 horas semanales diurnas de lunes a sábado, no se incluye domingo y festivos con la empresa Spercol",
+        "votadaPor": "52348807"
+      },
+      "1044912391": {
+        "fecha": 1786594812916,
+        "valor": "Servicio aseo general y todero 42 horas semanales diurnas de lunes a sábado, no se incluye domingo y festivos con la empresa Spercol",
+        "votadaPor": "1044912391"
+      },
+      "1047381349": {
+        "fecha": 1786594823579,
+        "valor": "Servicio aseo general y Todero 12 horas de lunes a lunes con la empresa Spercol",
+        "votadaPor": "1047381349"
+      },
+      "1143368193": {
+        "fecha": 1786594909582,
+        "valor": "Servicio aseo general y todero 42 horas semanales diurnas de lunes a sábado, no se incluye domingo y festivos con la empresa Spercol",
+        "votadaPor": "1143368193"
+      },
+      "9066266": {
+        "fecha": 1786594836423,
+        "valor": "Todero 7 horas de lunes a domingos con la empresa Sogercol",
+        "votadaPor": "45530304"
+      }
     }
   }
 }
